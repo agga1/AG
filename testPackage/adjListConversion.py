@@ -1,0 +1,2 @@
+def toAdjList(G):
+    al = []
