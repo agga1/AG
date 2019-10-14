@@ -1,5 +1,5 @@
-from testPackage.readGraph import *
-from testPackage.unionFind import *
+from lab1.readGraph import *
+from lab1.unionFind import *
 
 
 def maxFlowPath(G, s, t):  # G[0] = V, G[1] = L

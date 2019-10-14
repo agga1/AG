@@ -1,12 +1,12 @@
-from testPackage.adjListConversion import getAdjList
-from testPackage.maxFlowPathBin import biggestWeight
-from testPackage.readGraph import *
+from adjListConversion import getAdjList
+from maxFlowPathBin import biggestWeight
+from readGraph import *
+import sys
 
-G = loadWeightedGraph("res/clique1000")
+#G = loadWeightedGraph("res/clique1000")
 
 
 def maxFlowPathDij(G, s, t):
-    print("start")
     adj = getAdjList(G)
     gVal = biggestWeight(G)
     maxFlow = [0]*len(adj)
@@ -20,8 +20,11 @@ def maxFlowPathDij(G, s, t):
                 maxFlow[edge[0]] = min(maxFlow[curr], edge[1])
                 mheap.append(edge[0])
 
-    print(maxFlow[t])
+    #print(maxFlow[t])
     return maxFlow[t]
 
 
-maxFlowPathDij(G, 1, 2)
+print(maxFlowPathDij(loadWeightedGraph(sys.argv[1]), 1, 2))
+
+#print(sys.argv[1])
+#maxFlowPathDij(G, 1, 2)

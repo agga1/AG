@@ -1,6 +1,6 @@
-from testPackage.readGraph import loadWeightedGraph
+from readGraph import loadWeightedGraph
 
-G = loadWeightedGraph("res/g1")
+#G = loadWeightedGraph("res/g1")
 
 
 def getAdjList(G):  # G[0] = V, G[1] = L

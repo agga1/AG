@@ -1,7 +1,7 @@
-from testPackage.adjListConversion import getAdjList
-from testPackage.readGraph import loadWeightedGraph
+from adjListConversion import getAdjList
+from readGraph import loadWeightedGraph
 
-G = loadWeightedGraph("res/g1")
+#G = loadWeightedGraph("res/g1")
 
 
 def dfs(adj, s, t, minWeight, vis):
