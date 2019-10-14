@@ -1,7 +1,7 @@
 from testPackage.readGraph import loadWeightedGraph
 from testPackage.DFS import *
 
-G = loadWeightedGraph("res/clique5")
+G = loadWeightedGraph("res/clique1000")
 
 def smallestWeight(G):
     ans = G[1][1][2]
@@ -20,9 +20,22 @@ def biggestWeight(G):
 def maxFlowPathBin(G, s, t):
     mini = smallestWeight(G)
     maxi = biggestWeight(G)
-    mid = mini+(maxi-mini)//2
-    while True:
-        print(mid)
+    mid = (maxi+mini)//2
+    while (maxi-mini) > 1:
+        if dfsWrap(G, s, t, mid):
+            mini = mid
+        else:
+            maxi = mid
+        mid = (maxi+mini)//2
+    if dfsWrap(G, s, t, mini+1):
+        return mini + 1
+    else:
+        return mini
+
+
+print(maxFlowPathBin(G, 1, 2))
+
+"""
         if not dfsWrap(G, s, t, mid):
             print(mid, " is too high")
             maxi = mid - 1
@@ -35,6 +48,4 @@ def maxFlowPathBin(G, s, t):
                 return mid
             mini = mid + 1
             mid = mini + (maxi - mini) // 2
-
-print(maxFlowPathBin(G, 1, 2))
-
+"""
