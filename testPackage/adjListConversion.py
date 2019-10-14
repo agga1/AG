@@ -16,6 +16,6 @@ def getAdjList(G):  # G[0] = V, G[1] = L
     return al
 
 
-getAdjList(G)
+#getAdjList(G)
 
 
