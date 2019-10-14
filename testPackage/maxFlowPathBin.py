@@ -16,7 +16,6 @@ def biggestWeight(G):
         ans = max(ans, edge[2])
     return ans
 
-# TODO fix!
 def maxFlowPathBin(G, s, t):
     mini = smallestWeight(G)
     maxi = biggestWeight(G)
@@ -33,7 +32,7 @@ def maxFlowPathBin(G, s, t):
         return mini
 
 
-print(maxFlowPathBin(G, 1, 2))
+#print(maxFlowPathBin(G, 1, 2))
 
 """
         if not dfsWrap(G, s, t, mid):
