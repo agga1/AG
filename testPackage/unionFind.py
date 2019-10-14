@@ -14,10 +14,4 @@ def connected(par, i, j):
     return find(par, i) == find(par, j)
 
 
-par = [x for x in range(0, 10)]
-print(par)
-conns = [(0, 1), (2, 3)]
-for e in conns:
-    union(par, e[0], e[1])
-
 

@@ -2,7 +2,7 @@ def loadWeightedGraph(name):
     """Load a graph in the DIMACS ascii format (with weights) from
      the file "name" and return it as a list of sets
      Returns (V,L)
-     V -- number of vertices (testPackage, ..., V)
+     V -- number of vertices (1, ..., V)
      L -- list of edges in the format (x,y,w): edge between x and y with weight w (x<y)"""
 
     V = 0
@@ -35,7 +35,7 @@ def sortEdges(G):
     return G
 
 
-G = loadWeightedGraph("res/clique5")
-printEdges(G)
-G = sortEdges(G)
-printEdges(G)
+#G = loadWeightedGraph("res/clique5")
+#printEdges(G)
+#G = sortEdges(G)
+#printEdges(G)
