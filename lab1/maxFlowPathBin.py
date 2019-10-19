@@ -1,7 +1,7 @@
 from readGraph import loadWeightedGraph
 from DFS import *
 
-G = loadWeightedGraph("res/clique1000")
+#G = loadWeightedGraph("res/clique1000")
 
 def smallestWeight(G):
     ans = min(G[1], key=lambda p: p[2])
@@ -28,7 +28,7 @@ def maxFlowPathBin(G, s, t):
         return mini
 
 
-print(maxFlowPathBin(G, 1, 2))
+#print(maxFlowPathBin(G, 1, 2))
 
 """
         if not dfsWrap(G, s, t, mid):
