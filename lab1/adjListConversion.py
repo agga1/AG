@@ -1,4 +1,4 @@
-from readGraph import loadWeightedGraph
+#from readGraph import loadWeightedGraph
 
 #G = loadWeightedGraph("res/g1")
 
