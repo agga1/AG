@@ -2,7 +2,7 @@ from lab2.BFS import BFS
 from lab2.dimacs import loadDirectedWeightedGraph
 from lab1.adjListConversion import getAdjList
 
-G = loadDirectedWeightedGraph("graphs-lab2/flow/clique20")
+G = loadDirectedWeightedGraph("graphs-lab2/flow/trivial2")
 
 
 def fordFulkerson(G, s, t):
