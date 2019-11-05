@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="476e9ee6-aa1f-466c-9a12-e9f3cb4dd90b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lab2/BFSDictRepr.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/exerc2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab2/fordDictRepr.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/dimacs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/minCutPhase.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/node.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab2/ford.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/ford.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linki.txt" beforeDir="false" afterPath="$PROJECT_DIR$/linki.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,30 +30,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lab2/exerc2.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lab3/minCutPhase.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="65" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
+            <state relative-caret-position="102">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lab2/graphs-lab2/connectivity/clique100">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lab2/graphs-lab2/connectivity/simple">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lab3/node.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lab2/fordDictRepr.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <caret line="3" column="10" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
               </folding>
@@ -64,12 +61,17 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lab2/BFSDictRepr.py">
+        <entry file="file://$PROJECT_DIR$/lab2/dimacs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13">
-              <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+            <state relative-caret-position="179">
+              <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lab3/dimacs.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -109,6 +111,8 @@
         <option value="$PROJECT_DIR$/lab2/ford.py" />
         <option value="$PROJECT_DIR$/lab2/fordDictRepr.py" />
         <option value="$PROJECT_DIR$/lab2/exerc2.py" />
+        <option value="$PROJECT_DIR$/lab3/minCutPhase.py" />
+        <option value="$PROJECT_DIR$/lab3/node.py" />
       </list>
     </option>
   </component>
@@ -122,7 +126,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -138,20 +141,13 @@
             <path>
               <item name="AG" type="b2602c69:ProjectViewProjectNode" />
               <item name="AG" type="462c0819:PsiDirectoryNode" />
-              <item name="lab2" type="462c0819:PsiDirectoryNode" />
-              <item name="graphs-lab2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AG" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AG" type="462c0819:PsiDirectoryNode" />
-              <item name="lab2" type="462c0819:PsiDirectoryNode" />
-              <item name="graphs-lab2" type="462c0819:PsiDirectoryNode" />
-              <item name="connectivity" type="462c0819:PsiDirectoryNode" />
+              <item name="lab3" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -161,6 +157,9 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Agnieszka\Dev\Studia\AG\lab3" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Agnieszka\Dev\Studia\AG\testPackage" />
     </key>
@@ -314,23 +313,24 @@
       <workItem from="1571078075720" duration="364000" />
       <workItem from="1571078456036" duration="4864000" />
       <workItem from="1571485837942" duration="3194000" />
-      <workItem from="1572784068052" duration="5524000" />
+      <workItem from="1572784068052" duration="5578000" />
+      <workItem from="1572967483037" duration="726000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25584000" />
+    <option name="totallyTimeSpent" value="26364000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17732793" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1805668" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3268206" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3179396" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3179396" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -464,12 +464,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab2/ex2.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab2/ex2.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/lab2/ex2.py" />
     <entry file="file://$PROJECT_DIR$/linki.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -515,33 +510,57 @@
     <entry file="file://$PROJECT_DIR$/lab2/graphs-lab2/connectivity/cycle">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab2/graphs-lab2/connectivity/simple">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab2/BFSDictRepr.py">
+    <entry file="file://$PROJECT_DIR$/lab2/exerc2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13">
-          <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab2/fordDictRepr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="289">
+          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lab2/graphs-lab2/connectivity/clique100">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab2/exerc2.py">
+    <entry file="file://$PROJECT_DIR$/lab2/graphs-lab2/connectivity/simple">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab2/BFSDictRepr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab2/fordDictRepr.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="65" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
+          <caret line="3" column="10" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab2/dimacs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab3/dimacs.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab3/minCutPhase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab3/node.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
         </state>
       </provider>
     </entry>
