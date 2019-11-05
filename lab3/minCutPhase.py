@@ -1,29 +1,50 @@
 from queue import PriorityQueue
 from lab3.dimacs import *
 from lab3.node import *
+import heapq
 
 def minimumCutPhase( G ):
     a = 1
     S = []
     S.append(a)
-    q = PriorityQueue(len(G))
-    q.put(10, a)
-    q.put(8, a)
-    print(q.get())
-    # for vkey, vVal in G[a].edges.items():
-    #     q.put(vVal, (vkey, vVal))
-    # while len(S) < len(G):
-    #     v = q.get()
-    #     S.append(v)
-    #     for vkey, vVal in G[v].edges.items():
-    #         if vkey in S:
-    #             continue
-    #         currVal = q.get(vkey)
-    #         q.put(vVal, vkey)
-    #     print(v)
+    q = []
+    currFlow = 0
+    for vkey, vVal in G[a].edges.items():
+        q.append([vVal, vkey])
+        currFlow += vVal
+    heapq.heapify(q)
+    prevFlow = currFlow
+    print(list(q))
+    while not len(q)==0:
+        v = heapq.heappop(q)
+        print("\npopped ", v)
+        S.append(v[1])
+        prevFlow = currFlow
+        currFlow = 0
+        for key, val in G[v[1]].edges.items():
+            print(" neigh ", key, end=" ")
+            if key in S:
+                continue
+            i = 0
+            while len(q)> i and q[i][1]!=key:
+                i += 1
+            if len(q) == i:
+                print(key, " not in q ")
+                heapq.heappush(q, [val, key])
+                currFlow += val
+                print(list(q))
+                continue
+            if q[i][1] == key:
+                print("updating ",q[i], end="")
+                q[i][0] += val
+                currFlow += q[i][0]
+                heapq.heapify(q)
+    print(S)
+    print("flow ", prevFlow)
 
 
-(V, L) = loadWeightedGraph("res/clique5")  # wczytaj graf
+
+(V, L) = loadWeightedGraph("res/cycle")  # wczytaj graf
 G = [Node() for i in range(V + 1)]
 
 for (x, y, c) in L:
