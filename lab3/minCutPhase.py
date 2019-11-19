@@ -1,54 +1,53 @@
 from queue import PriorityQueue
+from lab3.mergeVertices import mergeVertices
 from lab3.dimacs import *
 from lab3.node import *
-import heapq
 
 def minimumCutPhase( G ):
     a = 1
     S = []
     S.append(a)
-    q = []
+    actual_len = len(G)-1
+    for node in G:
+        if not node.active:
+            actual_len -= 1
+    q = PriorityQueue()
+    q_dict = {}  # contains actual flow from key to all vert in S
     currFlow = 0
     for vkey, vVal in G[a].edges.items():
-        q.append([vVal, vkey])
-        currFlow += vVal
-    heapq.heapify(q)
-    prevFlow = currFlow
-    print(list(q))
-    while not len(q)==0:
-        v = heapq.heappop(q)
-        print("\npopped ", v)
+        q.put((-vVal, vkey))
+        q_dict[vkey] = -vVal
+    while len(S) < actual_len:
+        v = q.get()
+        print(" got ", v)
+        if v[1] not in q_dict:  # vertex is already in S, this entry has been updated with bigger weight before
+            continue
+        del q_dict[v[1]]
         S.append(v[1])
-        prevFlow = currFlow
-        currFlow = 0
+        currFlow = -1*v[0]
         for key, val in G[v[1]].edges.items():
-            print(" neigh ", key, end=" ")
-            if key in S:
+            if key in S:  # edge v-key inside S
                 continue
-            i = 0
-            while len(q)> i and q[i][1]!=key:
-                i += 1
-            if len(q) == i:
-                print(key, " not in q ")
-                heapq.heappush(q, [val, key])
-                currFlow += val
-                print(list(q))
-                continue
-            if q[i][1] == key:
-                print("updating ",q[i], end="")
-                q[i][0] += val
-                currFlow += q[i][0]
-                heapq.heapify(q)
-    print(S)
-    print("flow ", prevFlow)
+            if key in q_dict:
+                q_dict[key] -= val
+                q.put((q_dict[key], key))
+            else:
+                q_dict[key] = -val
+                q.put((-val, key))
 
+    mergeVertices(G, S[-1], S[-2])
+    # print(currFlow)
+    return currFlow
 
+#
+# (V, L) = loadWeightedGraph("res/grid5x5")  # wczytaj graf
+# G = [Node() for i in range(V + 1)]
+#
+# for (x, y, c) in L:
+#     G[x].addEdge(y, c)
+#     G[y].addEdge(x, c)
 
-(V, L) = loadWeightedGraph("res/cycle")  # wczytaj graf
-G = [Node() for i in range(V + 1)]
-
-for (x, y, c) in L:
-    G[x].addEdge(y, c)
-    G[y].addEdge(x, c)
-
-minimumCutPhase( G )
+# ans = len(G)-1
+# for i in range(len(G)-2):
+#     ans = min(minimumCutPhase( G ), ans)
+# print(ans)

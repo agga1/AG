@@ -1,28 +1,27 @@
 from lab3.dimacs import *
 from lab3.node import Node
 
-(V, L) = loadWeightedGraph( "res/clique5" )
+# (V, L) = loadWeightedGraph( "res/clique5" )
+#
+# G = [ Node() for i in range(V+1) ]
+#
+# for (x, y, c) in L:
+#   G[x].addEdge(y, c)
+#   G[y].addEdge(x, c)
 
-G = [ Node() for i in range(V+1) ]
 
-for (x, y, c) in L:
-  G[x].addEdge(y, c)
-  G[y].addEdge(x, c)
-
-
-def mergeVertices( G, x, y):
+def mergeVertices(G, x, y):  # y will be deleted
+    print(" merging ", x, y)
     for key, weight in G[y].edges.items():
-        print(key, weight)
         G[y].active = False
-        if key == x:
+        G[key].delEdge(y)
+        if key == x:  # ignore x-y edge
             continue
-        if key in G[x].edges:
-            G[x].edges[key] += weight
-        else:
-            G[x].edges[key] = weight
-        G[y].edges = {}
+        G[key].addEdge(x, weight)
+        G[x].addEdge(key, weight)
+    G[y].edges = {}  # redundant, maybe delete to keep inf about original graph?
+    G[x].mergedWith.append(y)
 
-
-mergeVertices(G, 1 , 2)
-print(G[1].edges)
+# mergeVertices(G, 1 , 2)
+# print(G[1].edges)
 
