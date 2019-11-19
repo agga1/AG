@@ -8,7 +8,7 @@ def minimumCutPhase( G ):
     S = []
     S.append(a)
     actual_len = len(G)-1
-    for node in G:
+    for node in G:  # get actual nr of vertices, without merged ones
         if not node.active:
             actual_len -= 1
     q = PriorityQueue()
@@ -28,13 +28,8 @@ def minimumCutPhase( G ):
         for key, val in G[v[1]].edges.items():
             if key in S:  # edge v-key inside S
                 continue
-            if key in q_dict:
-                q_dict[key] -= val
-                q.put((q_dict[key], key))
-            else:
-                q_dict[key] = -val
-                q.put((-val, key))
-
+            q_dict[key] = q_dict.get(key, 0) - val
+            q.put((q_dict[key], key))
     mergeVertices(G, S[-1], S[-2])
     # print(currFlow)
     return currFlow
