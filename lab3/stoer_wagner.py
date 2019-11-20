@@ -6,9 +6,9 @@ from lab3.node import *
 def stoer_wagner(G):
     if len(G) < 2:
         return 0
-    ans = minimumCutPhase(G)
+    ans = minimumCutPhase(G, len(G)-1)
     for i in range(len(G) - 3):  # G longer by 1, 1 already executed, and no action if 1 vertex left
-        ans = min(minimumCutPhase(G), ans)
+        ans = min(minimumCutPhase(G, len(G)-2-i), ans)
     return ans
 
 

@@ -3,21 +3,23 @@ from lab3.mergeVertices import mergeVertices
 from lab3.dimacs import *
 from lab3.node import *
 
-def minimumCutPhase( G ):
+
+def minimumCutPhase(G, active_vertices=None):
     a = 1
-    S = []
-    S.append(a)
-    actual_len = len(G)-1
-    for node in G:  # get actual nr of vertices, without merged ones
-        if not node.active:
-            actual_len -= 1
+    S = [a]
+    if active_vertices is None:  # get actual nr of vertices, without merged ones
+        active_vertices = len(G)-1
+        for node in G:
+            if not node.active:
+                active_vertices -= 1
+
     q = PriorityQueue()
     q_dict = {}  # contains actual flow from key to all vert in S
     currFlow = 0
     for vkey, vVal in G[a].edges.items():
         q.put((-vVal, vkey))
         q_dict[vkey] = -vVal
-    while len(S) < actual_len:
+    while len(S) < active_vertices:
         v = q.get()
         print(" got ", v)
         if v[1] not in q_dict:  # vertex is already in S, this entry has been updated with bigger weight before
@@ -31,7 +33,6 @@ def minimumCutPhase( G ):
             q_dict[key] = q_dict.get(key, 0) - val
             q.put((q_dict[key], key))
     mergeVertices(G, S[-1], S[-2])
-    # print(currFlow)
     return currFlow
 
 #
