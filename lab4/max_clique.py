@@ -6,7 +6,7 @@ from utils.test_utils import load_graph_as_nodes
 from lab4.lexBFS import lexBFS
 
 
-@test(data="res/maxclique", loader=load_graph_as_nodes)
+# @test(data="res/maxclique", loader=load_graph_as_nodes)
 def biggest_clique(G: List[Node]) -> int:
     """ returns size of the biggest clique in given chordal graph """
     assert (is_chordal(G)), "Received graph is not chordal! "
