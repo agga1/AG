@@ -1,6 +1,6 @@
 import os
 from lab4.Node import Node
-from lab4.create_graph import create_graph
+from utils.create_graph import create_graph
 from lab4.lexBFS import lexBFS
 from typing import List
 
@@ -9,7 +9,7 @@ for name in os.listdir("res/chordal"):
     graphs.append(f"res/chordal/{name}")
 
 
-def checkLexBFS(G: List[Node], vs: List[int]) -> bool:
+def test_lex_BFS(G: List[Node], vs: List[int]) -> bool:
   n = len(G)
   pi = [None] * n
   for i, v in enumerate(vs):
@@ -32,4 +32,4 @@ for graph in graphs:
     G = create_graph(graph)
     vs = lexBFS(G)
     graph = graph.split("/")[-1]
-    print( checkLexBFS(G, vs))
+    print(test_lex_BFS(G, vs))
