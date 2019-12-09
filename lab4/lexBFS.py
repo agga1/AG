@@ -4,7 +4,6 @@ from lab4.Node import Node
 
 
 def lexBFS(G: List[Node]) -> List[int]:
-
     sets = []
     vs= []
     startSet = [x for x in range(1, len(G))]
