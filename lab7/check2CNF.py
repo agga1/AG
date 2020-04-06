@@ -2,12 +2,8 @@ from lab7.dimacs import *
 import networkx as nx
 from networkx.algorithms.components import strongly_connected_components
 from networkx.algorithms.dag import topological_sort
-from typing import Dict, Optional, List
-import os
+from typing import Dict, Optional
 
-def getExpression(name):
-    (V, F) = loadCNFFormula(name)
-    return F
 
 def toNxGraph(name):
     (V,F) = loadCNFFormula(name)
@@ -58,19 +54,3 @@ def any2CNF(name: str) -> Optional[Dict[int, bool]]:
 
     return vBoolValues
 
-
-def checkProposedEval(anyEval: Dict[int, bool], expr: List[List[int]]) -> bool:
-    for pear in expr:
-        if not (anyEval[pear[0]] or anyEval[pear[1]]):
-            print("formula is incorrect!")
-            return False
-    return True
-
-
-dirName = "graphs/sat"
-
-for fileName in os.listdir(dirName):
-    name = f"{dirName}/{fileName}"
-    anyEval = any2CNF(name)
-    if anyEval is not None:
-        print(checkProposedEval(anyEval, getExpression(name)))
